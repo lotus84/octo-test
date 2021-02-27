@@ -311,9 +311,23 @@ template {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
+  font-family: "Roboto";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff"); }
+  src: url("../fonts/roboto-v20-latin_cyrillic-ext_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-v20-latin_cyrillic-ext_cyrillic-regular.woff") format("woff"); }
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/roboto-v20-latin_cyrillic-ext_cyrillic-500.woff2") format("woff2"), url("../fonts/roboto-v20-latin_cyrillic-ext_cyrillic-500.woff") format("woff"); }
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/roboto-v20-latin_cyrillic-ext_cyrillic-700.woff2") format("woff2"), url("../fonts/roboto-v20-latin_cyrillic-ext_cyrillic-700.woff") format("woff"); }
 
 *,
 *::before,
@@ -335,9 +349,9 @@ body {
   height: 100%;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: "", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  font-family: "Roboto", "Arial", sans-serif;
   color: #000000;
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
@@ -467,12 +481,6 @@ button,
 .scroll-lock {
   position: fixed;
   overflow-y: auto; }
-
-.btn-reset {
-  padding: 0;
-  background: rgba(255, 255, 255, 0);
-  border: none;
-  cursor: pointer; }
 
 @-webkit-keyframes disableBreakpointAnimation {
   0% {
