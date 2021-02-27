@@ -1,0 +1,14 @@
+mixin toggle(props = {})
+  .toggle&attributes(attributes)
+    label
+      input.visually-hidden(type="checkbox", name=props.name, checked= props.isChecked ? true : null)
+      span.toggle__elem
+      span.toggle__label(class= props.isLabelHidden ? 'visually-hidden' : null)!=props.label
+
+//- argTypes
+  props: {
+    label: string,
+    name: string,
+    isLabelHidden: bool,
+    isChecked: bool,
+  }

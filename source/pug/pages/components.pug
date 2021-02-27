@@ -149,3 +149,7 @@ block main
           +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-delete", iconWidth: 15, iconHeight: 15})
           +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-close", iconWidth: 15, iconHeight: 15})
         code +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-delete", iconWidth: 15, iconHeight: 15}) <br> +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-close", iconWidth: 15, iconHeight: 15})
+        div(style="display: grid; grid-template-columns: repeat(8, 1fr); justify-items: center;")
+          +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true})
+          +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: false})
+        code +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true}) <br> +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: false})

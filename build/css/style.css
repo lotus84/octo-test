@@ -847,6 +847,52 @@ button,
   color: #03a9f4;
   opacity: 0.5; }
 
+.toggle {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+  .toggle label {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer; }
+  .toggle input:checked + .toggle__elem::after {
+    left: 0;
+    background-color: #59b843; }
+
+.toggle__elem {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 25px;
+  height: 9px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; }
+  .toggle__elem::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #d32f2f;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    -webkit-transition: left 0.3s ease, background-color 0.3s ease;
+    transition: left 0.3s ease, background-color 0.3s ease; }
+
+.toggle__label {
+  margin-left: 10px; }
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {

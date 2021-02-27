@@ -320,6 +320,18 @@
                 </svg>
               </button>
             </div><code>+button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-delete", iconWidth: 15, iconHeight: 15}) <br> +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-close", iconWidth: 15, iconHeight: 15})</code>
+            <div style="display: grid; grid-template-columns: repeat(8, 1fr); justify-items: center;">
+              <div class="toggle">
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="released" checked="checked"/><span class="toggle__elem"></span><span class="toggle__label visually-hidden">Опубликовано</span>
+                </label>
+              </div>
+              <div class="toggle">
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="released"/><span class="toggle__elem"></span><span class="toggle__label visually-hidden">Опубликовано</span>
+                </label>
+              </div>
+            </div><code>+toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true}) <br> +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: false})</code>
           </section>
         </div>
       </main>
