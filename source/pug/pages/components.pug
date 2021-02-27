@@ -61,10 +61,8 @@ block main
 
     .container code {
       display: block;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      margin: 10px 0;
+      padding: 10px;
       background-color: #BBE1B2;
     }
 
@@ -117,6 +115,12 @@ block main
         div
           +button({text: "Обновить", color: "orange", isLink: true, href: "#"})
         code +button({text: "Обновить", color: "orange", isLink: true, href: "#"})
+
+      section
+        h2 Bread crumbs
+        div
+          +breadcrumbs([{text: "Каталог", href: "#"}, {text: "МОи предложения", href: "#"},])
+        code +breadcrumbs([{text: "Каталог", href: "#"}, {text: "МОи предложения", href: "#"},])
 
 
 

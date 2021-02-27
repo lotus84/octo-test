@@ -3,7 +3,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 8px;
+  padding: 3px 7px;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -11,6 +11,7 @@
   border: 1px solid transparent;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
   transition: color $transition, background-color $transition, opacity $transition, border-color $transition;
+  outline: none;
 
   &:disabled {
     cursor: auto;

@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol></svg></div>
+    <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-right" viewBox="0 0 6 10">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M.4697 9.5303a.75.75 0 010-1.0606L3.9393 5 .4697 1.5303A.75.75 0 111.5303.4697l4 4a.75.75 0 010 1.0606l-4 4a.75.75 0 01-1.0606 0z" fill="currentColor"/>
+</symbol><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-home" viewBox="0 0 17 15">
+<path d="M8.49998 0.275391L0 7.92539H2.55V14.7254H6.80001V9.6254H10.2V14.7254H14.45V7.92539H17L8.49998 0.275391Z" fill="currentColor"/>
+</symbol></svg>
+    </div>
     <div class="wrapper">
       <header class="header">
         <div class="header__wrapper"><a class="header__logo" href="main.html" aria-label="Переход на главную">Логотип</a>
@@ -78,10 +83,8 @@
         
         .container code {
           display: block;
-          margin-top: 10px;
-          margin-bottom: 10px;
-          padding-top: 10px;
-          padding-bottom: 10px;
+          margin: 10px 0;
+          padding: 10px;
           background-color: #BBE1B2;
         }
         
@@ -129,6 +132,25 @@
             </div><code>+button({text: "Применить", color: "border", isLink: false, type: "button", isDisabled: true})</code>
             <div><a class="button button--orange" href="#">Обновить</a>
             </div><code>+button({text: "Обновить", color: "orange", isLink: true, href: "#"})</code>
+          </section>
+          <section>
+            <h2>Bread crumbs</h2>
+            <div>
+              <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html"><span class="breadcrumbs__icon">
+                      <svg width="17" height="15" aria-hidden="true">
+                        <use xlink:href="#icon-home"></use>
+                      </svg></span><span class="visually-hidden">Главная</span></a><span class="breadcrumbs__separator">
+                    <svg width="6" height="10" aria-hidden="true">
+                      <use xlink:href="#arrow-right"></use>
+                    </svg></span></li>
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#"><span>Каталог</span></a><span class="breadcrumbs__separator">
+                    <svg width="6" height="10" aria-hidden="true">
+                      <use xlink:href="#arrow-right"></use>
+                    </svg></span></li>
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current">МОи предложения</a></li>
+              </ul>
+            </div><code>+breadcrumbs([{text: "Каталог", href: "#"}, {text: "МОи предложения", href: "#"},])</code>
           </section>
         </div>
       </main>

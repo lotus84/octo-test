@@ -1,0 +1,27 @@
+mixin breadcrumbs(arr)
+  ul.breadcrumbs&attributes(attributes)
+    li.breadcrumbs__item
+      a.breadcrumbs__link(href="main.html")
+        span.breadcrumbs__icon
+          +icon("icon-home", 17, 15)
+        span.visually-hidden Главная
+      span.breadcrumbs__separator
+        +icon("arrow-right", 6, 10)
+    each item, index in arr
+      if(index === arr.length - 1)
+        li.breadcrumbs__item
+          a.breadcrumbs__link.breadcrumbs__link--current= item.text
+      else
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href=item.href)
+            span= item.text
+          span.breadcrumbs__separator
+            +icon("arrow-right", 6, 10)
+
+//- argTypes
+  arr: [
+    {
+      text: string,
+      href: string,
+    },
+  ]
