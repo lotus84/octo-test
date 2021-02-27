@@ -68,6 +68,23 @@
           padding: 20px 0;
         }
         
+        .container h2 {
+          margin: 0;
+          margin-bottom: 20px;
+          font-weight: 400;
+          font-size: 48px;
+          line-height: 60px;
+        }
+        
+        .container code {
+          display: block;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          background-color: #BBE1B2;
+        }
+        
       </style>
       <main>
         <div class="container"><a class="components-backwards" href="index.html"><span>&larr;</span><span>вернуться на разводящую</span></a>
@@ -77,6 +94,41 @@
             <p>Класс компонента \ модификаторы</p>
             <p style="color: red;">При необходимости, подсказки \ предупреждение \ важная информация</p>
             <div>Компонент</div>
+          </section>
+          <section>
+            <h2>Button</h2>
+            <div>
+              <button class="button button--orange" type="button">Обновить</button>
+            </div><code>+button({text: "Обновить", color: "orange", isLink: false, type: "button", isDisabled: false})</code>
+            <div>
+              <button class="button button--orange" type="button" disabled="disabled">Обновить</button>
+            </div><code>+button({text: "Обновить", color: "orange", isLink: false, type: "button", isDisabled: true})</code>
+            <div>
+              <button class="button button--blue" type="button">Добавить</button>
+            </div><code>+button({text: "Добавить", color: "blue", isLink: false, type: "button", isDisabled: false})</code>
+            <div>
+              <button class="button button--blue" type="button" disabled="disabled">Добавить</button>
+            </div><code>+button({text: "Добавить", color: "blue", isLink: false, type: "button", isDisabled: true})</code>
+            <div>
+              <button class="button button--green" type="button">Принять</button>
+            </div><code>+button({text: "Принять", color: green, isLink: false, type: "button", isDisabled: false})</code>
+            <div>
+              <button class="button button--green" type="button" disabled="disabled">Принять</button>
+            </div><code>+button({text: "Принять", color: green, isLink: false, type: "button", isDisabled: true})</code>
+            <div>
+              <button class="button button--red" type="button">Отменить</button>
+            </div><code>+button({text: "Отменить", color: "red", isLink: false, type: "button", isDisabled: false})</code>
+            <div>
+              <button class="button button--red" type="button" disabled="disabled">Отменить</button>
+            </div><code>+button({text: "Отменить", color: "red", isLink: false, type: "button", isDisabled: true})</code>
+            <div>
+              <button class="button button--border" type="button">Применить</button>
+            </div><code>+button({text: "Применить", color: "border", isLink: false, type: "button", isDisabled: false})</code>
+            <div>
+              <button class="button button--border" type="button" disabled="disabled">Применить</button>
+            </div><code>+button({text: "Применить", color: "border", isLink: false, type: "button", isDisabled: true})</code>
+            <div><a class="button button--orange" href="#">Обновить</a>
+            </div><code>+button({text: "Обновить", color: "orange", isLink: true, href: "#"})</code>
           </section>
         </div>
       </main>

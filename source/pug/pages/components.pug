@@ -51,6 +51,23 @@ block main
       padding: 20px 0;
     }
 
+    .container h2 {
+      margin: 0;
+      margin-bottom: 20px;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 60px;
+    }
+
+    .container code {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #BBE1B2;
+    }
+
   main
     .container
       a.components-backwards(href="index.html")
@@ -64,3 +81,42 @@ block main
         p Класс компонента \ модификаторы
         p(style="color: red;") При необходимости, подсказки \ предупреждение \ важная информация
         div Компонент
+
+      section
+        h2 Button
+        div
+          +button({text: "Обновить", color: "orange", isLink: false, type: "button", isDisabled: false})
+        code +button({text: "Обновить", color: "orange", isLink: false, type: "button", isDisabled: false})
+        div
+          +button({text: "Обновить", color: "orange", isLink: false, type: "button", isDisabled: true})
+        code +button({text: "Обновить", color: "orange", isLink: false, type: "button", isDisabled: true})
+        div
+          +button({text: "Добавить", color: "blue", isLink: false, type: "button", isDisabled: false})
+        code +button({text: "Добавить", color: "blue", isLink: false, type: "button", isDisabled: false})
+        div
+          +button({text: "Добавить", color: "blue", isLink: false, type: "button", isDisabled: true})
+        code +button({text: "Добавить", color: "blue", isLink: false, type: "button", isDisabled: true})
+        div
+          +button({text: "Принять", color: "green", isLink: false, type: "button", isDisabled: false})
+        code +button({text: "Принять", color: green, isLink: false, type: "button", isDisabled: false})
+        div
+          +button({text: "Принять", color: "green", isLink: false, type: "button", isDisabled: true})
+        code +button({text: "Принять", color: green, isLink: false, type: "button", isDisabled: true})
+        div
+          +button({text: "Отменить", color: "red", isLink: false, type: "button", isDisabled: false})
+        code +button({text: "Отменить", color: "red", isLink: false, type: "button", isDisabled: false})
+        div
+          +button({text: "Отменить", color: "red", isLink: false, type: "button", isDisabled: true})
+        code +button({text: "Отменить", color: "red", isLink: false, type: "button", isDisabled: true})
+        div
+          +button({text: "Применить", color: "border", isLink: false, type: "button", isDisabled: false})
+        code +button({text: "Применить", color: "border", isLink: false, type: "button", isDisabled: false})
+        div
+          +button({text: "Применить", color: "border", isLink: false, type: "button", isDisabled: true})
+        code +button({text: "Применить", color: "border", isLink: false, type: "button", isDisabled: true})
+        div
+          +button({text: "Обновить", color: "orange", isLink: true, href: "#"})
+        code +button({text: "Обновить", color: "orange", isLink: true, href: "#"})
+
+
+
