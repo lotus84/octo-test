@@ -1,0 +1,19 @@
+mixin button-icon(props = {})
+  if (props.isLink)
+    a.button-icon(class!= props.color ? `button-icon--${props.color}` : 'button-icon--blue', href!= props.href ? props.href : '#')&attributes(attributes)
+      +icon(props.iconName, props.iconWidth, props.iconHeight)
+  else
+    button.button-icon(class!= props.color ? `button-icon--${props.color}` : 'button-icon--blue', type!= props.type ? props.type : 'button', disabled= props.isDisabled ? true : null)&attributes(attributes)
+      +icon(props.iconName, props.iconWidth, props.iconHeight)
+
+//- argTypes
+  props: {
+    color: oneOf['blue', 'red', 'grey'],
+    isLink: bool,
+    href: string,
+    type: oneOf['button', 'submit', 'reset']
+    isDisabled: bool,
+    iconName: string,
+    iconWidth: number,
+    iconHeight: number
+  }
