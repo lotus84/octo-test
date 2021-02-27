@@ -153,3 +153,12 @@ block main
           +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true})
           +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: false})
         code +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true}) <br> +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: false})
+
+      section
+        h2 Pin
+        div(style="display: grid; grid-template-columns: repeat(8, 1fr); justify-items: center;")
+          +pin({color: "grey", number: "5"})
+          +pin({color: "blue", number: "7"})
+          +pin({color: "green", number: "5"})
+          +pin({color: "red", number: "2"})
+        code +pin({color: "grey", number: "5"}) <br> +pin({color: "blue", number: "7"}) <br> +pin({color: "green", number: "5"}) <br> +pin({color: "red", number: "2"})

@@ -893,6 +893,36 @@ button,
 .toggle__label {
   margin-left: 10px; }
 
+.pin {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 20px;
+  min-height: 20px;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 20px;
+  color: #ffffff;
+  border-radius: 50%; }
+
+.pin--grey {
+  background-color: #979797; }
+
+.pin--blue {
+  background-color: #03a9f4; }
+
+.pin--green {
+  background-color: #59b843; }
+
+.pin--red {
+  background-color: #d32f2f; }
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
