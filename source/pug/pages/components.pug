@@ -195,3 +195,21 @@ block main
             {href: "#", iconName: "icon-paper", linkText: "В архив", hasPin: false,},
             ]})
         code +accordion({btnText: "Продажи", linkList: [{href: "#", iconName: "icon-barcode", linkText: "Новые заказы", hasPin: true, pinColor: "green", pinNumber: "5"}, {href: "#", iconName: "icon-car", linkText: "В работе", hasPin: true, pinColor: "blue", pinNumber: "7"}, {href: "#", iconName: "icon-return-box", linkText: "Возврат", hasPin: true, pinColor: "red", pinNumber: "2"}, {href: "#", iconName: "icon-sale", linkText: "Скидки", hasPin: false,}, {href: "#", iconName: "icon-paper", linkText: "В архив", hasPin: false,},]})
+
+      section
+        h2 Text fields
+        div
+          +custom-input({label: "Адрес доставки", type: "text", name: "shipping-address", isRequired: false})
+        code +custom-input({label: "Адрес доставки", type: "text", name: "shipping-address", isRequired: false})
+        div
+          +custom-input({label: "Адрес доставки", isLabelHidden: true, type: "text", name: "shipping-address", isRequired: false})
+        code +custom-input({label: "Адрес доставки", isLabelHidden: true, type: "text", name: "shipping-address", isRequired: false})
+        div
+          +custom-checkbox({label: "Активен", name: "active", isChecked: false, isRequired: false})
+        code +custom-checkbox({label: "Активен", name: "active", isChecked: false, isRequired: false})
+        div
+          +custom-checkbox({label: "Активен", name: "delivery", isLabelHidden: true, isChecked: false, isRequired: false})
+        code +custom-checkbox({label: "Активен", name: "delivery", isLabelHidden: true, isChecked: false, isRequired: false})
+        div
+          +custom-search({label: "Поиск", isLabelHidden: true, name: "search"})
+        code +custom-search({label: "Поиск", isLabelHidden: true, name: "search"})

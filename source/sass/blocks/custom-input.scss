@@ -1,0 +1,124 @@
+.custom-input {
+  display: flex;
+  width: 100%;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 9px 10px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    background: $color-default-white;
+    border: 1px solid $color-gainsboro;
+    border-radius: 2px;
+    color: $color-nero;
+    transition: border-color $transition;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-color: $color-deep-sky-blue;
+    }
+  }
+
+  &__label {
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: $color-nero;
+  }
+
+  &--checkbox {
+    input {
+      position: absolute;
+
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+
+      clip: rect(0 0 0 0);
+    }
+
+    label {
+      position: relative;
+      width: auto;
+      min-height: 18px;
+      padding-left: 28px;
+
+      span {
+        margin-bottom: 0;
+        margin-left: 0;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $color-grey;
+        background-color: $color-default-white;
+        transition: border-color $transition, background-color $transition;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 3px;
+        width: 12px;
+        height: 12px;
+        background-image: url("../img/svg/icon-tick.svg");
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $transition, visibility $transition;
+      }
+    }
+
+    input:hover + label::before,
+    input:focus + label::before {
+      border-color: $color-deep-sky-blue;
+    }
+
+    input:checked + label::before {
+      border-color: $color-deep-sky-blue;
+      background-color: $color-deep-sky-blue;
+    }
+
+    input:checked + label::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &--search {
+    position: relative;
+
+    input {
+      padding: 4px 8px;
+      padding-right: 60px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .custom-input__btn-search {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+

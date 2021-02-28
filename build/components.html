@@ -565,6 +565,43 @@
               </div>
             </div><code>+accordion({btnText: "Продажи", linkList: [{href: "#", iconName: "icon-barcode", linkText: "Новые заказы", hasPin: true, pinColor: "green", pinNumber: "5"}, {href: "#", iconName: "icon-car", linkText: "В работе", hasPin: true, pinColor: "blue", pinNumber: "7"}, {href: "#", iconName: "icon-return-box", linkText: "Возврат", hasPin: true, pinColor: "red", pinNumber: "2"}, {href: "#", iconName: "icon-sale", linkText: "Скидки", hasPin: false,}, {href: "#", iconName: "icon-paper", linkText: "В архив", hasPin: false,},]})</code>
           </section>
+          <section>
+            <h2>Text fields</h2>
+            <div>
+              <div class="custom-input">
+                <label><span class="custom-input__label">Адрес доставки</span>
+                  <input type="text" name="shipping-address"/>
+                </label>
+              </div>
+            </div><code>+custom-input({label: "Адрес доставки", type: "text", name: "shipping-address", isRequired: false})</code>
+            <div>
+              <div class="custom-input">
+                <label><span class="custom-input__label visually-hidden">Адрес доставки</span>
+                  <input type="text" name="shipping-address"/>
+                </label>
+              </div>
+            </div><code>+custom-input({label: "Адрес доставки", isLabelHidden: true, type: "text", name: "shipping-address", isRequired: false})</code>
+            <div>
+              <div class="custom-input custom-input--checkbox">
+                <input type="checkbox" name="active" id="active"/>
+                <label for="active"><span>Активен</span></label>
+              </div>
+            </div><code>+custom-checkbox({label: "Активен", name: "active", isChecked: false, isRequired: false})</code>
+            <div>
+              <div class="custom-input custom-input--checkbox">
+                <input type="checkbox" name="delivery" id="delivery"/>
+                <label for="delivery"><span class="visually-hidden">Активен</span></label>
+              </div>
+            </div><code>+custom-checkbox({label: "Активен", name: "delivery", isLabelHidden: true, isChecked: false, isRequired: false})</code>
+            <div>
+              <div class="custom-input custom-input--search">
+                <label><span class="custom-input__label visually-hidden">Поиск</span>
+                  <input type="text" name="search"/>
+                </label>
+                <button class="button button--blue custom-input__btn-search" type="button">Поиск</button>
+              </div>
+            </div><code>+custom-search({label: "Поиск", isLabelHidden: true, name: "search"})</code>
+          </section>
         </div>
       </main>
       <footer class="footer"></footer>

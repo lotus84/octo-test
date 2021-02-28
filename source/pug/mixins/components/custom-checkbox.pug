@@ -1,0 +1,15 @@
+mixin custom-checkbox(props = {})
+  .custom-input.custom-input--checkbox(class= props.mod ? `custom-input--${props.mod}` : null)&attributes(attributes)
+    input(type="checkbox", name=props.name, id=props.name, checked= props.isChecked ? true : null, required= props.isRequired ? required : null)
+    label(for=props.name)
+      span(class= props.isLabelHidden ? 'visually-hidden' : null)!=props.label
+
+//- argTypes
+  props: {
+    mod: string,
+    label: string,
+    name: string,
+    isChecked: bool,
+    isLabelHidden: bool,
+    isRequired: bool
+  }

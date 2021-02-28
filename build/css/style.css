@@ -1051,6 +1051,106 @@ button,
 .accordion__link-text {
   margin-right: auto; }
 
+.custom-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+  .custom-input label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    cursor: pointer; }
+  .custom-input input,
+  .custom-input textarea {
+    width: 100%;
+    padding: 9px 10px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    color: #212121;
+    -webkit-transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease;
+    outline: none; }
+    .custom-input input:hover, .custom-input input:focus,
+    .custom-input textarea:hover,
+    .custom-input textarea:focus {
+      border-color: #03a9f4; }
+  .custom-input__label {
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #212121; }
+  .custom-input--checkbox input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0); }
+  .custom-input--checkbox label {
+    position: relative;
+    width: auto;
+    min-height: 18px;
+    padding-left: 28px; }
+    .custom-input--checkbox label span {
+      margin-bottom: 0;
+      margin-left: 0;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px; }
+    .custom-input--checkbox label::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border: 2px solid #757575;
+      background-color: #ffffff;
+      -webkit-transition: border-color 0.3s ease, background-color 0.3s ease;
+      transition: border-color 0.3s ease, background-color 0.3s ease; }
+    .custom-input--checkbox label::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 3px;
+      width: 12px;
+      height: 12px;
+      background-image: url("../img/svg/icon-tick.svg");
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+      transition: opacity 0.3s ease, visibility 0.3s ease; }
+  .custom-input--checkbox input:hover + label::before,
+  .custom-input--checkbox input:focus + label::before {
+    border-color: #03a9f4; }
+  .custom-input--checkbox input:checked + label::before {
+    border-color: #03a9f4;
+    background-color: #03a9f4; }
+  .custom-input--checkbox input:checked + label::after {
+    opacity: 1;
+    visibility: visible; }
+  .custom-input--search {
+    position: relative; }
+    .custom-input--search input {
+      padding: 4px 8px;
+      padding-right: 60px;
+      font-size: 12px;
+      line-height: 14px; }
+    .custom-input--search .custom-input__btn-search {
+      position: absolute;
+      top: 0;
+      right: 0; }
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
