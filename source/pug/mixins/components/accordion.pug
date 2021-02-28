@@ -1,5 +1,5 @@
 mixin accordion(props = {})
-  .accordion
+  .accordion(class= props.isOpen ? 'active' : null)
     button.accordion__btn(type="button")
       span.accordion__btn-text!= props.btnText
       span.accordion__btn-icon
@@ -17,6 +17,7 @@ mixin accordion(props = {})
 
 //- argTypes
   props: {
+    isOpen: bool,
     btnText: string,
     linkList: [
       {

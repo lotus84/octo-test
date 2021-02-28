@@ -12,7 +12,7 @@
   position: relative;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   min-height: 100vh;
   min-height: calc(100 * var(--vh, 1vh));
   overflow-x: hidden;
@@ -37,6 +37,15 @@
   main {
     flex-grow: 1;
   }
+}
+
+.wrapper__inner {
+  width: calc(100% - 240px);
+  flex-grow: 1;
+}
+
+.wrapper__inner--no-sidebar {
+  width: 100%;
 }
 
 .scroll-lock {

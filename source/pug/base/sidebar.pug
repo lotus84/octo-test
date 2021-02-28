@@ -1,0 +1,188 @@
+mixin sidebar()
+  -
+    var accordionList = [
+      {
+        isOpen: false,
+        btnText: "Склад",
+        linkList: [
+          {
+            href: "#",
+            iconName: "icon-shop",
+            linkText: "Мои предложения",
+            hasPin: false,
+          },
+          {
+            href: "#",
+            iconName: "icon-trolley",
+            linkText: "Добавить",
+            hasPin: false,
+          },
+        ]
+      },
+      {
+        isOpen: false,
+        btnText: "Продажи",
+        linkList: [
+          {
+            href: "#",
+            iconName: "icon-barcode",
+            linkText: "Новые заказы",
+            hasPin: true,
+            pinColor: "green",
+            pinNumber: "5"
+          },
+          {
+            href: "#",
+            iconName: "icon-car",
+            linkText: "В работе",
+            hasPin: true,
+            pinColor: "blue",
+            pinNumber: "7"
+          },
+          {
+            href: "#",
+            iconName: "icon-return-box",
+            linkText: "Возврат",
+            hasPin: true,
+            pinColor: "red",
+            pinNumber: "2"
+          },
+          {
+            href: "#",
+            iconName: "icon-sale",
+            linkText: "Скидки",
+            hasPin: false,
+          },
+          {
+            href: "#",
+            iconName: "icon-paper",
+            linkText: "В архив",
+            hasPin: false,
+          },
+        ]
+      },
+      {
+        isOpen: false,
+        btnText: "Мои покупки",
+        linkList: [
+          {
+            href: "#",
+            iconName: "icon-cart",
+            linkText: "Корзина",
+            hasPin: true,
+            pinColor: "grey",
+            pinNumber: "5"
+          },
+          {
+            href: "#",
+            iconName: "icon-buy",
+            linkText: "На согласовании",
+            hasPin: true,
+            pinColor: "blue",
+            pinNumber: "3"
+          },
+          {
+            href: "#",
+            iconName: "icon-car",
+            linkText: "Действующие",
+            hasPin: true,
+            pinColor: "green",
+            pinNumber: "4"
+          },
+          {
+            href: "#",
+            iconName: "icon-paper",
+            linkText: "Архив",
+            hasPin: false,
+          },
+        ]
+      },
+      {
+        isOpen: false,
+        btnText: "Финансы",
+        linkList: [
+          {
+            href: "#",
+            iconName: "icon-shop",
+            linkText: "Мои предложения",
+            hasPin: false,
+          },
+          {
+            href: "#",
+            iconName: "icon-trolley",
+            linkText: "Добавить",
+            hasPin: false,
+          },
+        ]
+      },
+      {
+        isOpen: false,
+        btnText: "Претензии",
+        linkList: [
+          {
+            href: "#",
+            iconName: "icon-buy",
+            linkText: "На согласовании",
+            hasPin: true,
+            pinColor: "blue",
+            pinNumber: "3"
+          },
+          {
+            href: "#",
+            iconName: "icon-trolley",
+            linkText: "Добавить",
+            hasPin: false,
+          },
+        ]
+      },
+      {
+        isOpen: false,
+        btnText: "Управлении",
+        linkList: [
+          {
+            href: "#",
+            iconName: "icon-operator",
+            linkText: "Поддержка",
+            hasPin: false,
+          },
+          {
+            href: "#",
+            iconName: "icon-like",
+            linkText: "Отзывы",
+            hasPin: false,
+          },
+          {
+            href: "#",
+            iconName: "icon-bar-chart",
+            linkText: "Статистика",
+            hasPin: false,
+          },
+          {
+            href: "#",
+            iconName: "icon-globe",
+            linkText: "Данные API",
+            hasPin: false,
+          },
+          {
+            href: "#",
+            iconName: "icon-member",
+            linkText: "Настройки",
+            hasPin: false,
+          },
+        ]
+      },
+    ]
+
+  .sidebar
+    span.sidebar__logo
+      +icon("logo", 76, 13)
+    .sidebar__menu
+      a.sidebar__menu-link(href="#")
+        +icon("icon-dashboard", 19, 19)
+        span Рабочий стол
+      a.sidebar__menu-link(href="#")
+        +icon("icon-search", 19, 19)
+        span Каталог
+      each item in accordionList
+        .sidebar__accordion-item
+          +accordion(item)
