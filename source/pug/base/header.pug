@@ -1,14 +1,14 @@
 mixin header(headerMod, currentPage)
   header(class=(headerMod) ? "header header--" + headerMod : "header")
     .header__wrapper
-      a.header__link(href="#")
+      a.header__link(href="#", aria-label="Назад")
         +icon("icon-back", 20, 10)
       .header__search-form
         form
           .header__search-input
             label
               input(type="text", name="header-search", placeholder="Введите номер или наименование запчасти")
-              span.input-search__icon
+              span.header__search-icon
                 +icon("icon-search", 16, 16)
               span.visually-hidden Поиск
       .header__nav
@@ -23,5 +23,5 @@ mixin header(headerMod, currentPage)
             a.header__nav-link(href="#") Сменить пользователя
           li.header__nav-item
             a.header__nav-link(href="#") Выход
-      a.header__link(href="#")
+      a.header__link(href="#", aria-label="Открыть меню")
         +icon("icon-menu", 25, 24)

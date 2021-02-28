@@ -82,15 +82,15 @@
     }
   }
 
-  input:hover + .input-search__icon,
-  input:focus + .input-search__icon {
+  input:hover + .header__search-icon,
+  input:focus + .header__search-icon {
     svg {
       color: $color-deep-sky-blue;
     }
   }
 }
 
-.input-search__icon {
+.header__search-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;

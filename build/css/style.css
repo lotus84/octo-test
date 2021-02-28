@@ -645,11 +645,11 @@ button,
       color: rgba(0, 0, 0, 0.54); }
     .header__search-input input::placeholder {
       color: rgba(0, 0, 0, 0.54); }
-  .header__search-input input:hover + .input-search__icon svg,
-  .header__search-input input:focus + .input-search__icon svg {
+  .header__search-input input:hover + .header__search-icon svg,
+  .header__search-input input:focus + .header__search-icon svg {
     color: #03a9f4; }
 
-.input-search__icon {
+.header__search-icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -660,7 +660,7 @@ button,
       -ms-flex-pack: center;
           justify-content: center;
   margin-left: 29px; }
-  .input-search__icon svg {
+  .header__search-icon svg {
     color: #757575;
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease; }
