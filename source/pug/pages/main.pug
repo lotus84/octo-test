@@ -1,0 +1,17 @@
+extends ../base/layout
+
+block data
+  include ../data/placeholder
+
+block variables
+  - var title = "AKTARUS — Главная"
+  - var wrapperMod = ""
+  - var hasSidebar = true
+  - var hasHeader = true
+  - var headerMod = ""
+  - var currentPage = "main" //- для остальных страниц пишем либо пустую строку, либо индекс
+
+block main
+  main
+    .container
+

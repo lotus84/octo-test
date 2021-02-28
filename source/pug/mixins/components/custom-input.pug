@@ -1,0 +1,17 @@
+mixin custom-input(props = {})
+  .custom-input(class= props.mod ? `custom-input--${props.mod}` : null)&attributes(attributes)
+    label
+      span.custom-input__label(class= props.isLabelHidden ? 'visually-hidden' : null)!=props.label
+      input(type=props.type, name=props.name, value=! props.value ? props.value : null, placeholder!= props.placeholder ? props.placeholder : null, required= props.isRequired ? required : null)
+
+//- argTypes
+  props: {
+    mod: string,
+    label: string,
+    isLabelHidden: bool,
+    type: string,
+    name: string,
+    value: string,
+    placeholder: string,
+    isRequired: bool
+  }

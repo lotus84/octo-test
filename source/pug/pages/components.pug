@@ -1,0 +1,227 @@
+extends ../base/layout
+
+block data
+
+block variables
+  - var title = "Компоненты"
+  - var wrapperMod = ""
+  - var hasHeader = false
+  - var hasSidebar = false
+  - var currentPage = ""
+
+block main
+  style.
+    main > .container {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .components-backwards {
+      display: inline-block;
+      margin-bottom: 10px;
+      margin-left: 7px;
+      transition: color 0.3s ease;
+    }
+
+    .components-backwards:hover {
+      color: #03a9f4;
+    }
+
+    .components-backwards span:first-child {
+      position: relative;
+      top: -3px;
+
+      display: inline-block;
+      margin-right: 15px;
+
+      font-size: 16px;
+      line-height: 24px;
+      vertical-align: top;
+
+      transform: scale(2);
+    }
+
+    .components-backwards span:last-child {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .components-backwards + h1 {
+      margin-bottom: 0;
+    }
+
+    .container > section {
+      padding: 20px 0;
+    }
+
+    .container h2 {
+      margin: 0;
+      margin-bottom: 20px;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 60px;
+    }
+
+    .container code {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #BBE1B2;
+    }
+
+  main
+    .container
+      a.components-backwards(href="index.html")
+        span &larr;
+        span вернуться на разводящую
+      h1 Компоненты, используемые в вёрстке
+
+      section
+        h2 Название компонента или группы компонентов
+
+        p Класс компонента \ модификаторы
+        p(style="color: red;") При необходимости, подсказки \ предупреждение \ важная информация
+        div Компонент
+
+      section
+        h2 Button
+        div
+          +button({text: "Обновить", color: "orange", isLink: false, type: "button", isDisabled: false})
+        code +button({text: "Обновить", color: "orange", isLink: false, type: "button", isDisabled: false})
+        div
+          +button({text: "Обновить", color: "orange", isLink: false, type: "button", isDisabled: true})
+        code +button({text: "Обновить", color: "orange", isLink: false, type: "button", isDisabled: true})
+        div
+          +button({text: "Добавить", color: "blue", isLink: false, type: "button", isDisabled: false})
+        code +button({text: "Добавить", color: "blue", isLink: false, type: "button", isDisabled: false})
+        div
+          +button({text: "Добавить", color: "blue", isLink: false, type: "button", isDisabled: true})
+        code +button({text: "Добавить", color: "blue", isLink: false, type: "button", isDisabled: true})
+        div
+          +button({text: "Принять", color: "green", isLink: false, type: "button", isDisabled: false})
+        code +button({text: "Принять", color: green, isLink: false, type: "button", isDisabled: false})
+        div
+          +button({text: "Принять", color: "green", isLink: false, type: "button", isDisabled: true})
+        code +button({text: "Принять", color: green, isLink: false, type: "button", isDisabled: true})
+        div
+          +button({text: "Отменить", color: "red", isLink: false, type: "button", isDisabled: false})
+        code +button({text: "Отменить", color: "red", isLink: false, type: "button", isDisabled: false})
+        div
+          +button({text: "Отменить", color: "red", isLink: false, type: "button", isDisabled: true})
+        code +button({text: "Отменить", color: "red", isLink: false, type: "button", isDisabled: true})
+        div
+          +button({text: "Применить", color: "border", isLink: false, type: "button", isDisabled: false})
+        code +button({text: "Применить", color: "border", isLink: false, type: "button", isDisabled: false})
+        div
+          +button({text: "Применить", color: "border", isLink: false, type: "button", isDisabled: true})
+        code +button({text: "Применить", color: "border", isLink: false, type: "button", isDisabled: true})
+        div
+          +button({text: "Обновить", color: "orange", isLink: true, href: "#"})
+        code +button({text: "Обновить", color: "orange", isLink: true, href: "#"})
+
+      section
+        h2 Bread crumbs
+        div
+          +breadcrumbs([{text: "Каталог", href: "#"}, {text: "МОи предложения", href: "#"},])
+        code +breadcrumbs([{text: "Каталог", href: "#"}, {text: "МОи предложения", href: "#"},])
+
+      section
+        h2 Pagination
+        div
+          +pagination()
+        code +pagination()
+
+      section
+        h2 Table
+        div(style="display: grid; grid-template-columns: repeat(8, 1fr); justify-items: center;")
+          +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-edit", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+          +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-open", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+          +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-copy", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+          +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-sms", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+        code +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-edit", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"}) <br> +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-open", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"}) <br> +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-copy", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"}) <br> +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-sms", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+        div(style="display: grid; grid-template-columns: repeat(8, 1fr); justify-items: center;")
+          +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-expand", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+          +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-filter", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+          +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-chart", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+          +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-doc", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+          +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-folder", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+          +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-user", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+          +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-arrows", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+        code +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-expand", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"}) <br> +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-filter", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"}) <br> +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-chart", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"}) <br> +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-doc", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"}) <br> +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-folder", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"}) <br> +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-user", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"}) <br> +button-icon({color: 'grey', isLink: false, type: 'button', isDisabled: false, iconName: "icon-arrows", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+        div(style="display: grid; grid-template-columns: repeat(8, 1fr); justify-items: center;")
+          +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-delete", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+          +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-close", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+        code +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-delete", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"}) <br> +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-close", iconWidth: 15, iconHeight: 15, ariaLabel: "Удалить"})
+        div(style="display: grid; grid-template-columns: repeat(8, 1fr); justify-items: center;")
+          +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true})
+          +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: false})
+        code +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true}) <br> +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: false})
+
+      section
+        h2 Pin
+        div(style="display: grid; grid-template-columns: repeat(8, 1fr); justify-items: center;")
+          +pin({color: "grey", number: "5"})
+          +pin({color: "blue", number: "7"})
+          +pin({color: "green", number: "5"})
+          +pin({color: "red", number: "2"})
+        code +pin({color: "grey", number: "5"}) <br> +pin({color: "blue", number: "7"}) <br> +pin({color: "green", number: "5"}) <br> +pin({color: "red", number: "2"})
+
+      section
+        h2 Left Side
+        div(style="display: grid; grid-template-columns: repeat(9, 1fr); justify-items: center; row-gap: 30px; padding: 20px; color: #ffffff; background-color: #3C4251;")
+          +icon("icon-dashboard", 19, 19)
+          +icon("icon-search", 19, 19)
+          +icon("icon-shop", 19, 19)
+          +icon("icon-trolley", 19, 19)
+          +icon("icon-barcode", 19, 19)
+          +icon("icon-car", 19, 19)
+          +icon("icon-return-box", 19, 19)
+          +icon("icon-sale", 19, 19)
+          +icon("icon-paper", 19, 19)
+          +icon("icon-cart", 19, 19)
+          +icon("icon-buy", 19, 19)
+          +icon("icon-operator", 19, 19)
+          +icon("icon-like", 19, 19)
+          +icon("icon-bar-chart", 19, 19)
+          +icon("icon-globe", 19, 19)
+          +icon("icon-member", 19, 19)
+        code +icon("icon-dashboard", 19, 19) <br> +icon("icon-search", 19, 19) <br> +icon("icon-shop", 19, 19) <br> +icon("icon-trolley", 19, 19) <br> +icon("icon-barcode", 19, 19) <br> +icon("icon-car", 19, 19) <br> +icon("icon-return-box", 19, 19) <br> +icon("icon-sale", 19, 19) <br> +icon("icon-paper", 19, 19) <br> +icon("icon-cart", 19, 19) <br> +icon("icon-buy", 19, 19) <br> +icon("icon-operator", 19, 19) <br> +icon("icon-like", 19, 19) <br> +icon("icon-bar-chart", 19, 19) <br> +icon("icon-globe", 19, 19) <br> +icon("icon-member", 19, 19)
+
+      section
+        h2 Accordion
+        div
+          +accordion({isOpen: true, btnText: "Продажи", linkList: [
+            {href: "#", iconName: "icon-barcode", linkText: "Новые заказы", hasPin: true, pinColor: "green", pinNumber: "5"},
+            {href: "#", iconName: "icon-car", linkText: "В работе", hasPin: true, pinColor: "blue", pinNumber: "7"},
+            {href: "#", iconName: "icon-return-box", linkText: "Возврат", hasPin: true, pinColor: "red", pinNumber: "2"},
+            {href: "#", iconName: "icon-sale", linkText: "Скидки", hasPin: false,},
+            {href: "#", iconName: "icon-paper", linkText: "В архив", hasPin: false,},
+            ]})
+        code +accordion({isOpen: true, btnText: "Продажи", linkList: [{href: "#", iconName: "icon-barcode", linkText: "Новые заказы", hasPin: true, pinColor: "green", pinNumber: "5"}, {href: "#", iconName: "icon-car", linkText: "В работе", hasPin: true, pinColor: "blue", pinNumber: "7"}, {href: "#", iconName: "icon-return-box", linkText: "Возврат", hasPin: true, pinColor: "red", pinNumber: "2"}, {href: "#", iconName: "icon-sale", linkText: "Скидки", hasPin: false,}, {href: "#", iconName: "icon-paper", linkText: "В архив", hasPin: false,},]})
+        div
+          +accordion({isOpen: false, btnText: "Продажи", linkList: [
+            {href: "#", iconName: "icon-barcode", linkText: "Новые заказы", hasPin: true, pinColor: "green", pinNumber: "5"},
+            {href: "#", iconName: "icon-car", linkText: "В работе", hasPin: true, pinColor: "blue", pinNumber: "7"},
+            {href: "#", iconName: "icon-return-box", linkText: "Возврат", hasPin: true, pinColor: "red", pinNumber: "2"},
+            {href: "#", iconName: "icon-sale", linkText: "Скидки", hasPin: false,},
+            {href: "#", iconName: "icon-paper", linkText: "В архив", hasPin: false,},
+            ]})
+        code +accordion({isOpen: false, btnText: "Продажи", linkList: [{href: "#", iconName: "icon-barcode", linkText: "Новые заказы", hasPin: true, pinColor: "green", pinNumber: "5"}, {href: "#", iconName: "icon-car", linkText: "В работе", hasPin: true, pinColor: "blue", pinNumber: "7"}, {href: "#", iconName: "icon-return-box", linkText: "Возврат", hasPin: true, pinColor: "red", pinNumber: "2"}, {href: "#", iconName: "icon-sale", linkText: "Скидки", hasPin: false,}, {href: "#", iconName: "icon-paper", linkText: "В архив", hasPin: false,},]})
+
+      section
+        h2 Text fields
+        div
+          +custom-input({label: "Адрес доставки", type: "text", name: "shipping-address", isRequired: false})
+        code +custom-input({label: "Адрес доставки", type: "text", name: "shipping-address", isRequired: false})
+        div
+          +custom-input({label: "Адрес доставки", isLabelHidden: true, type: "text", name: "shipping-address", isRequired: false})
+        code +custom-input({label: "Адрес доставки", isLabelHidden: true, type: "text", name: "shipping-address", isRequired: false})
+        div
+          +custom-checkbox({label: "Активен", isLabelHidden: false, name: "active", isChecked: false, isRequired: false})
+        code +custom-checkbox({label: "Активен", name: "active", isChecked: false, isRequired: false})
+        div
+          +custom-checkbox({label: "Активен", isLabelHidden: true, name: "delivery", isChecked: false, isRequired: false})
+        code +custom-checkbox({label: "Активен", name: "delivery", isChecked: false, isRequired: false})
+        div
+          +custom-search({label: "Поиск", isLabelHidden: true, name: "search"})
+        code +custom-search({label: "Поиск", isLabelHidden: true, name: "search"})

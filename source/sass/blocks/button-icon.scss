@@ -1,0 +1,79 @@
+.button-icon {
+  @include reset-btn;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 15px;
+
+  svg {
+    display: block;
+    transition: color $transition, opacity $transition;
+  }
+}
+
+.button-icon--blue {
+  svg {
+    color: $color-deep-sky-blue;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      svg {
+        color: $color-dodger-blue;
+      }
+    }
+  }
+
+  &:active {
+    svg {
+      color: $color-dodger-blue;
+      opacity: 0.5;
+    }
+  }
+}
+
+.button-icon--red {
+  svg {
+    color: $color-persian-red;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      svg {
+        color: $color-fire-brick;
+      }
+    }
+  }
+
+  &:active {
+    svg {
+      color: $color-fire-brick;
+      opacity: 0.5;
+    }
+  }
+}
+
+.button-icon--grey {
+  svg {
+    color: $color-grey;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      svg {
+        color: $color-deep-sky-blue;
+      }
+    }
+  }
+
+  &:active {
+    svg {
+      color: $color-deep-sky-blue;
+      opacity: 0.5;
+    }
+  }
+}

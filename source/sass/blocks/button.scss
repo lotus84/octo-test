@@ -1,0 +1,133 @@
+.button {
+  @include reset-btn;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 7px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  transition: color $transition, background-color $transition, opacity $transition, border-color $transition;
+  outline: none;
+
+  &:disabled {
+    cursor: auto;
+  }
+}
+
+.button--orange {
+  color: $color-default-white;
+  background-color: $color-orange-peel;
+
+  &:disabled {
+    background-color: $color-safety-orange;
+    opacity: 0.5;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      background-color: $color-safety-orange;
+    }
+  }
+
+  &:active {
+    background-color: $color-safety-orange;
+    opacity: 0.5;
+  }
+}
+
+.button--blue {
+  color: $color-default-white;
+  background-color: $color-deep-sky-blue;
+
+  &:disabled {
+    background-color: $color-dodger-blue;
+    opacity: 0.5;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      background-color: $color-dodger-blue;
+    }
+  }
+
+  &:active {
+    background-color: $color-dodger-blue;
+    opacity: 0.5;
+  }
+}
+
+.button--green {
+  color: $color-default-white;
+  background-color: $color-apple;
+
+  &:disabled {
+    background-color: $color-la-palma;
+    opacity: 0.5;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      background-color: $color-la-palma;
+    }
+  }
+
+  &:active {
+    background-color: $color-la-palma;
+    opacity: 0.5;
+  }
+}
+
+.button--red {
+  color: $color-default-white;
+  background-color: $color-persian-red;
+
+  &:disabled {
+    background-color: $color-fire-brick;
+    opacity: 0.5;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      background-color: $color-fire-brick;
+    }
+  }
+
+  &:active {
+    background-color: $color-fire-brick;
+    opacity: 0.5;
+  }
+}
+
+.button--border {
+  color: $color-deep-sky-blue;
+  background-color: $color-default-white;
+  border-color: $color-deep-sky-blue;
+
+  &:disabled {
+    color: $color-default-white;
+    background-color: $color-deep-sky-blue;
+    opacity: 0.5;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: $color-default-white;
+      background-color: $color-deep-sky-blue;
+    }
+  }
+
+  &:active {
+    background-color: $color-deep-sky-blue;
+    opacity: 0.5;
+  }
+}
+

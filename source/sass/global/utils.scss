@@ -1,0 +1,71 @@
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  clip: rect(0 0 0 0);
+}
+
+.wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  min-height: calc(100 * var(--vh, 1vh));
+  overflow-x: hidden;
+
+  &--no-scrollbar {
+    height: 100vh;
+    height: calc(100 * var(--vh, 1vh));
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .header,
+  .footer {
+    flex-shrink: 0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+
+.wrapper__inner {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 240px);
+  flex-grow: 1;
+}
+
+.wrapper__inner--no-sidebar {
+  width: 100%;
+}
+
+.scroll-lock {
+  position: fixed;
+
+  overflow-y: auto;
+}
+
+@keyframes disableBreakpointAnimation {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

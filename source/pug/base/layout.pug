@@ -1,0 +1,33 @@
+include ../base/mixins
+include ../base/sidebar
+include ../base/header
+
+block data
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description", content="Aktarus")
+
+    //- используйте только для шрифта находящегося на первом экране
+    link(rel="preload", href="fonts/roboto-v20-latin_cyrillic-ext_cyrillic-regular.woff", as="font", crossorigin="anonymous")
+    link(rel="stylesheet", href="css/style.min.css")
+
+  body
+    +sprite()
+    div(class=(wrapperMod) ? "wrapper wrapper--" + wrapperMod : "wrapper")
+
+      if (hasSidebar)
+        +sidebar()
+      .wrapper__inner(class= (hasSidebar) ? null : "wrapper__inner--no-sidebar")
+        if (hasHeader)
+          +header()
+        block main
+
+    script(src="js/vendor.min.js")
+    script(src="js/main.min.js")

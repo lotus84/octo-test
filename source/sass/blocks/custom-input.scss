@@ -1,0 +1,133 @@
+.custom-input {
+  display: flex;
+  width: 100%;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 9px 10px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    background: $color-default-white;
+    border: 1px solid $color-gainsboro;
+    border-radius: 2px;
+    color: $color-nero;
+    transition: border-color $transition;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-color: $color-deep-sky-blue;
+    }
+  }
+
+  &__label {
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: $color-nero;
+  }
+
+  &--checkbox {
+    width: auto;
+
+    input {
+      position: absolute;
+
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+
+      clip: rect(0 0 0 0);
+    }
+
+    label {
+      width: auto;
+      min-height: 18px;
+      padding-left: 18px;
+
+      span {
+        margin-bottom: 0;
+        margin-left: 0;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    .custom-input__label {
+      margin-left: 10px;
+    }
+
+    .custom-input__checkbox {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -18px;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $color-grey;
+        background-color: $color-default-white;
+        transition: border-color $transition, background-color $transition;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: -15px;
+        width: 12px;
+        height: 12px;
+        background-image: url("../img/svg/icon-tick.svg");
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $transition, visibility $transition;
+      }
+    }
+
+    input:hover + .custom-input__checkbox::before,
+    input:focus + .custom-input__checkbox::before {
+      border-color: $color-deep-sky-blue;
+    }
+
+    input:checked + .custom-input__checkbox::before {
+      border-color: $color-deep-sky-blue;
+      background-color: $color-deep-sky-blue;
+    }
+
+    input:checked + .custom-input__checkbox::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &--search {
+    position: relative;
+
+    input {
+      padding: 4px 8px;
+      padding-right: 60px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .custom-input__btn-search {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+

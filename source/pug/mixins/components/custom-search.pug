@@ -1,0 +1,15 @@
+mixin custom-search(props = {})
+  .custom-input.custom-input--search(class= props.mod ? `custom-input--${props.mod}` : null)&attributes(attributes)
+    label
+      span.custom-input__label(class= props.isLabelHidden ? 'visually-hidden' : null)!=props.label
+      input(type="text", name=props.name, placeholder!= props.placeholder ? props.placeholder : null)
+    +button({text: "Поиск", color: "blue", isLink: false, type: "button", isDisabled: false})(class="custom-input__btn-search")
+
+//- argTypes
+  props: {
+    mod: string,
+    label: string,
+    isLabelHidden: bool,
+    name: string,
+    placeholder: string,
+  }

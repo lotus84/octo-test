@@ -1,0 +1,155 @@
+.table {
+  display: flex;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  background-color: $color-default-white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.table__title-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.table__title {
+  margin: 0;
+  margin-right: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.table__search-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.table__search {
+  max-width: 255px;
+  margin-left: 20px;
+}
+
+.table__body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.table__row {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid $color-gainsboro;
+}
+
+.table__cell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 0;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.table__cell--header {
+  padding: 18px 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-grey;
+}
+
+.table__cell--checkbox {
+  justify-content: center;
+  flex-shrink: 0;
+  width: 4.36%;//48px;
+  min-width: 48px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.table__cell--id {
+  width: 4.36%;//48px;
+  min-width: 48px;
+}
+
+.table__cell--user-name {
+  width: 37.45%;//412px;
+}
+
+.table__cell--user-mail {
+  width: 25%;//276px;
+}
+
+.table__cell--user-group {
+  width: 16.18%;//178px;
+}
+
+.table__cell--actions {
+  width: 12.65%;//138px
+  min-width: 138px;
+}
+
+.table__cell--toggle {
+  justify-content: center;
+  width: 4%;//45px
+  min-width: 45px;
+  border-left: 1px solid $color-gainsboro;
+}
+
+.table__cell--edit {
+  justify-content: center;
+  width: 4%;//45px
+  min-width: 45px;
+  border-left: 1px solid $color-gainsboro;
+}
+
+.table__cell--delete {
+  justify-content: center;
+  width: 4.65%;//48px
+  min-width: 48px;
+  border-left: 1px solid $color-gainsboro;
+}
+
+.table__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.table__info-text {
+  margin: 0;
+  margin-right: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.table__info-select {
+  margin-right: 94px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.table__pagination {
+  margin: 0 15px;
+}

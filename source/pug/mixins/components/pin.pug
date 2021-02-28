@@ -1,0 +1,8 @@
+mixin pin(props = {})
+  span.pin(class!= props.color ? `pin--${props.color}` : 'pin--blue')&attributes(attributes)= props.number
+
+//- argTypes
+  props: {
+    color: oneOf['grey', 'blue', 'green', 'red'],
+    number: string,
+  }

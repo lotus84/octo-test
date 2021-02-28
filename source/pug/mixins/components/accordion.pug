@@ -1,0 +1,32 @@
+mixin accordion(props = {})
+  .accordion(class= props.isOpen ? 'active' : null)
+    button.accordion__btn(type="button")
+      span.accordion__btn-text!= props.btnText
+      span.accordion__btn-icon
+        +icon("arrow-right", 6, 10)
+    .accordion__content
+      ul.accordion__list
+        each item in props.linkList
+          li.accordion__item
+            a.accordion__link(href=item.href)
+              span.accordion__link-icon
+                +icon(item.iconName, 19, 19)
+              span.accordion__link-text!= item.linkText
+              if item.hasPin
+                +pin({color: item.pinColor, number: item.pinNumber})
+
+//- argTypes
+  props: {
+    isOpen: bool,
+    btnText: string,
+    linkList: [
+      {
+        href: string,
+        iconName: string,
+        linkText: string,
+        hasPin: bool,
+        pinColor: string,
+        pinNumber: number
+      },
+    ]
+  }

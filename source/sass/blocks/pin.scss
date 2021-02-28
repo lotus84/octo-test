@@ -1,0 +1,28 @@
+.pin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  min-height: 20px;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 20px;
+  color: $color-default-white;
+  border-radius: 50%;
+}
+
+.pin--grey {
+  background-color: $color-nobel;
+}
+
+.pin--blue {
+  background-color: $color-deep-sky-blue;
+}
+
+.pin--green {
+  background-color: $color-apple;
+}
+
+.pin--red {
+  background-color: $color-persian-red;
+}

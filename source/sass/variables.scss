@@ -1,0 +1,56 @@
+// Colors
+//---------------------------------
+// https://www.htmlcsscolor.com/hex/334482
+
+// Default
+
+$color-default-black:             #000000;
+$color-default-white:             #ffffff;
+$color-transparent:               rgba(255, 255, 255, 0);
+
+// Base
+
+$color-nero:                      #212121;
+$color-grey:                      #757575;
+$color-nobel:                     #979797;
+$color-east-bay:                  #495062;
+$color-blue-zodiac:               #3c4251;
+$color-gainsboro:                 #e0e0e0;
+$color-white-smoke:               #f2f2f2;
+$color-deep-sky-blue:             #03a9f4;
+$color-dodger-blue:               #0380f4;
+$color-apple:                     #59b843;
+$color-la-palma:                  #3b9f23;
+$color-orange-peel:               #ff9800;
+$color-safety-orange:             #ff5c00;
+$color-persian-red:               #d32f2f;
+$color-fire-brick:                #c11a1a;
+
+// Gradient
+
+$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
+// Typography
+//---------------------------------
+
+$font-family--roboto:                     "Roboto", "Arial", sans-serif;
+
+// Animation
+//---------------------------------
+
+$transition:       0.3s ease;
+
+// Viewports
+//---------------------------------
+
+$viewport--sm:                      320px;
+$viewport--md:                      768px;
+$viewport--lg:                      1024px;
+$viewport--xl:                      1440px;
+$viewport--xxl:                     1920px;
+
+// Retina
+//---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;
