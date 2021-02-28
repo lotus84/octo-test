@@ -583,6 +583,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 64px;
   border-left: 1px solid rgba(0, 0, 0, 0.12); }
   .header__search-form form {
     display: -webkit-box;
@@ -593,7 +594,8 @@ button,
 .header__search-input {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  width: 100%; }
   .header__search-input label {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -604,8 +606,11 @@ button,
             flex-direction: row-reverse;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    width: 100%; }
   .header__search-input input {
+    width: 100%;
+    padding: 24px 20px;
     font-weight: 400;
     font-size: 13px;
     line-height: 16px;
@@ -630,13 +635,26 @@ button,
   .header__search-input input:focus + .input-search__icon svg {
     color: #03a9f4; }
 
-.input-search__icon svg {
-  color: #757575;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease; }
+.input-search__icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 29px; }
+  .input-search__icon svg {
+    color: #757575;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease; }
 
 .header__nav {
-  position: relative; }
+  position: relative;
+  height: 64px;
+  border-right: 1px solid rgba(0, 0, 0, 0.12); }
 
 .header__nav.active .header__nav-list {
   opacity: 1;
@@ -662,12 +680,12 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 64px;
   padding: 15px;
   padding-left: 20px;
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
-  border-right: 1px solid rgba(0, 0, 0, 0.12);
   color: rgba(0, 0, 0, 0.87);
   background-color: #ffffff;
   -webkit-transition: background-color 0.3s ease;
@@ -1159,6 +1177,7 @@ button,
           justify-content: space-between;
   width: 100%;
   padding: 25px;
+  padding-right: 30px;
   font-weight: 500;
   font-size: 13px;
   line-height: 15px;
@@ -1356,6 +1375,7 @@ button,
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 240px;
+  padding-bottom: 50px;
   background-color: #3c4251; }
 
 .sidebar__logo {
@@ -1368,7 +1388,8 @@ button,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 22px;
+  height: 64px;
+  padding: 20px;
   background: #495062;
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12); }

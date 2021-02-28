@@ -3,6 +3,7 @@
   flex-direction: column;
   flex-shrink: 0;
   width: 240px;
+  padding-bottom: 50px;
   background-color: $color-blue-zodiac;
 }
 
@@ -10,7 +11,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 22px;
+  height: 64px;
+  padding: 20px;
   background: $color-east-bay;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
 

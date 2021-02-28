@@ -45,6 +45,7 @@
 .header__search-form {
   flex-grow: 1;
   display: flex;
+  height: 64px;
   border-left: 1px solid rgba($color-default-black, 0.12);
 
   form {
@@ -55,14 +56,18 @@
 
 .header__search-input {
   display: flex;
+  width: 100%;
 
   label {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    width: 100%;
   }
 
   input {
+    width: 100%;
+    padding: 24px 20px;
     font-weight: 400;
     font-size: 13px;
     line-height: 16px;
@@ -86,6 +91,11 @@
 }
 
 .input-search__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 29px;
+
   svg {
     color: $color-grey;
     transition: color $transition;
@@ -94,6 +104,8 @@
 
 .header__nav {
   position: relative;
+  height: 64px;
+  border-right: 1px solid rgba($color-default-black, 0.12);
 }
 
 .header__nav.active {
@@ -108,13 +120,12 @@
   @include reset-btn;
   display: flex;
   align-items: center;
-  // height: 64px;
+  height: 64px;
   padding: 15px;
   padding-left: 20px;
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
-  border-right: 1px solid rgba($color-default-black, 0.12);
   color: rgba($color-default-black, 0.87);
   background-color: $color-default-white;
   transition: background-color $transition;
