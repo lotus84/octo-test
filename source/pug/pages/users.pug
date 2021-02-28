@@ -13,5 +13,120 @@ block variables
 
 block main
   main
-    .container
+    +breadcrumbs([{text: "Пользователи", href: "#"},])
+    .page
+      .table
+        form(action="")
+          .table__title-box
+            h1.table__title Пользователи
+            +button({text: "Обновить", color: "orange", isLink: false, type: "button", isDisabled: false})
+          .table__search-box
+            +button({text: "Добавить пользователя", color: "blue", isLink: false, type: "button", isDisabled: false})
+            +custom-search({label: "Поиск", isLabelHidden: true, name: "search"})(class="table__search")
+          .table__body
+            .table__row
+              .table__cell.table__cell--checkbox.table__cell--header
+                +custom-checkbox({label: "Выбрано", name: "checked", isLabelHidden: true, isChecked: false, isRequired: false})
+              .table__cell.table__cell--id.table__cell--header ID
+              .table__cell.table__cell--user-name.table__cell--header Имя пользователя
+              .table__cell.table__cell--user-mail.table__cell--header Email
+              .table__cell.table__cell--user-group.table__cell--header Группа пользователей
+              .table__cell.table__cell--header.table__cell--actions Действии
+            .table__row
+              .table__cell.table__cell--checkbox
+                +custom-checkbox({label: "Выбрано", name: "checked", isLabelHidden: true, isChecked: false, isRequired: false})
+              .table__cell.table__cell--id 1
+              .table__cell.table__cell--user-name Худовеков Георгий Измайлович
+              .table__cell.table__cell--user-mail name@domain.com
+              .table__cell.table__cell--user-group Администратор
+              .table__cell.table__cell--toggle
+                +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true})
+              .table__cell.table__cell--edit
+                +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-edit", iconWidth: 15, iconHeight: 15})
+              .table__cell.table__cell--delete
+                +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-delete", iconWidth: 15, iconHeight: 15})
+            .table__row
+              .table__cell.table__cell--checkbox
+                +custom-checkbox({label: "Выбрано", name: "checked", isLabelHidden: true, isChecked: false, isRequired: false})
+              .table__cell.table__cell--id 2
+              .table__cell.table__cell--user-name Худовеков Георгий Измайлович
+              .table__cell.table__cell--user-mail name@domain.com
+              .table__cell.table__cell--user-group Поставщик
+              .table__cell.table__cell--toggle
+                +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true})
+              .table__cell.table__cell--edit
+                +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-edit", iconWidth: 15, iconHeight: 15})
+              .table__cell.table__cell--delete
+                +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-delete", iconWidth: 15, iconHeight: 15})
+            .table__row
+              .table__cell.table__cell--checkbox
+                +custom-checkbox({label: "Выбрано", name: "checked", isLabelHidden: true, isChecked: false, isRequired: false})
+              .table__cell.table__cell--id 3
+              .table__cell.table__cell--user-name Худовеков Георгий Измайлович
+              .table__cell.table__cell--user-mail name@domain.com
+              .table__cell.table__cell--user-group Поставщик
+              .table__cell.table__cell--toggle
+                +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true})
+              .table__cell.table__cell--edit
+                +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-edit", iconWidth: 15, iconHeight: 15})
+              .table__cell.table__cell--delete
+                +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-delete", iconWidth: 15, iconHeight: 15})
+            .table__row
+              .table__cell.table__cell--checkbox
+                +custom-checkbox({label: "Выбрано", name: "checked", isLabelHidden: true, isChecked: false, isRequired: false})
+              .table__cell.table__cell--id 4
+              .table__cell.table__cell--user-name Худовеков Георгий Измайлович
+              .table__cell.table__cell--user-mail name@domain.com
+              .table__cell.table__cell--user-group Поставщик
+              .table__cell.table__cell--toggle
+                +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true})
+              .table__cell.table__cell--edit
+                +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-edit", iconWidth: 15, iconHeight: 15})
+              .table__cell.table__cell--delete
+                +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-delete", iconWidth: 15, iconHeight: 15})
+            .table__row
+              .table__cell.table__cell--checkbox
+                +custom-checkbox({label: "Выбрано", name: "checked", isLabelHidden: true, isChecked: false, isRequired: false})
+              .table__cell.table__cell--id 5
+              .table__cell.table__cell--user-name Худовеков Георгий Измайлович
+              .table__cell.table__cell--user-mail name@domain.com
+              .table__cell.table__cell--user-group Покупатель
+              .table__cell.table__cell--toggle
+                +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true})
+              .table__cell.table__cell--edit
+                +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-edit", iconWidth: 15, iconHeight: 15})
+              .table__cell.table__cell--delete
+                +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-delete", iconWidth: 15, iconHeight: 15})
+            .table__row
+              .table__cell.table__cell--checkbox
+                +custom-checkbox({label: "Выбрано", name: "checked", isLabelHidden: true, isChecked: false, isRequired: false})
+              .table__cell.table__cell--id 6
+              .table__cell.table__cell--user-name Худовеков Георгий Измайлович
+              .table__cell.table__cell--user-mail name@domain.com
+              .table__cell.table__cell--user-group Покупатель
+              .table__cell.table__cell--toggle
+                +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true})
+              .table__cell.table__cell--edit
+                +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-edit", iconWidth: 15, iconHeight: 15})
+              .table__cell.table__cell--delete
+                +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-delete", iconWidth: 15, iconHeight: 15})
+            .table__row
+              .table__cell.table__cell--checkbox
+                +custom-checkbox({label: "Выбрано", name: "checked", isLabelHidden: true, isChecked: false, isRequired: false})
+              .table__cell.table__cell--id 7
+              .table__cell.table__cell--user-name Худовеков Георгий Измайлович
+              .table__cell.table__cell--user-mail name@domain.com
+              .table__cell.table__cell--user-group Покупатель
+              .table__cell.table__cell--toggle
+                +toggle({label: "Опубликовано", name: "released", isLabelHidden: true, isChecked: true})
+              .table__cell.table__cell--edit
+                +button-icon({color: 'blue', isLink: false, type: 'button', isDisabled: false, iconName: "icon-edit", iconWidth: 15, iconHeight: 15})
+              .table__cell.table__cell--delete
+                +button-icon({color: 'red', isLink: false, type: 'button', isDisabled: false, iconName: "icon-delete", iconWidth: 15, iconHeight: 15})
+          .table__info
+            p.table__info-text Выбрано <span>2</span> заказа
+            .table__info-select Выберите массовые действия
+            +button({text: "Выполнить", color: "orange", isLink: false, type: "button", isDisabled: false})(class="table__info-btn")
+          +pagination()(class="table__pagination")
+
 

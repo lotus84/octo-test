@@ -35,11 +35,15 @@
   }
 
   main {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
   }
 }
 
 .wrapper__inner {
+  display: flex;
+  flex-direction: column;
   width: calc(100% - 240px);
   flex-grow: 1;
 }

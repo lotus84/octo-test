@@ -624,16 +624,18 @@
               </div><code>+custom-input({label: "Адрес доставки", isLabelHidden: true, type: "text", name: "shipping-address", isRequired: false})</code>
               <div>
                 <div class="custom-input custom-input--checkbox">
-                  <input type="checkbox" name="active" id="active"/>
-                  <label for="active"><span>Активен</span></label>
+                  <label>
+                    <input type="checkbox" name="active"/><span class="custom-input__checkbox"></span><span class="custom-input__label">Активен</span>
+                  </label>
                 </div>
               </div><code>+custom-checkbox({label: "Активен", name: "active", isChecked: false, isRequired: false})</code>
               <div>
                 <div class="custom-input custom-input--checkbox">
-                  <input type="checkbox" name="delivery" id="delivery"/>
-                  <label for="delivery"><span class="visually-hidden">Активен</span></label>
+                  <label>
+                    <input type="checkbox" name="delivery"/><span class="custom-input__checkbox"></span><span class="custom-input__label visually-hidden">Активен</span>
+                  </label>
                 </div>
-              </div><code>+custom-checkbox({label: "Активен", name: "delivery", isLabelHidden: true, isChecked: false, isRequired: false})</code>
+              </div><code>+custom-checkbox({label: "Активен", name: "delivery", isChecked: false, isRequired: false})</code>
               <div>
                 <div class="custom-input custom-input--search">
                   <label><span class="custom-input__label visually-hidden">Поиск</span>

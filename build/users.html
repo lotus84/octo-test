@@ -454,7 +454,305 @@
           </div>
         </header>
         <main>
-          <div class="container"></div>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html"><span class="breadcrumbs__icon">
+                  <svg width="17" height="15" aria-hidden="true">
+                    <use xlink:href="#icon-home"></use>
+                  </svg></span><span class="visually-hidden">Главная</span></a><span class="breadcrumbs__separator">
+                <svg width="6" height="10" aria-hidden="true">
+                  <use xlink:href="#arrow-right"></use>
+                </svg></span></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current">Пользователи</a></li>
+          </ul>
+          <div class="page">
+            <div class="table">
+              <form action="">
+                <div class="table__title-box">
+                  <h1 class="table__title">Пользователи</h1>
+                  <button class="button button--orange" type="button">Обновить</button>
+                </div>
+                <div class="table__search-box">
+                  <button class="button button--blue" type="button">Добавить пользователя</button>
+                  <div class="custom-input custom-input--search table__search">
+                    <label><span class="custom-input__label visually-hidden">Поиск</span>
+                      <input type="text" name="search"/>
+                    </label>
+                    <button class="button button--blue custom-input__btn-search" type="button">Поиск</button>
+                  </div>
+                </div>
+                <div class="table__body">
+                  <div class="table__row">
+                    <div class="table__cell table__cell--checkbox table__cell--header">
+                      <div class="custom-input custom-input--checkbox">
+                        <label>
+                          <input type="checkbox" name="checked"/><span class="custom-input__checkbox"></span><span class="custom-input__label visually-hidden">Выбрано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--id table__cell--header">ID</div>
+                    <div class="table__cell table__cell--user-name table__cell--header">Имя пользователя</div>
+                    <div class="table__cell table__cell--user-mail table__cell--header">Email</div>
+                    <div class="table__cell table__cell--user-group table__cell--header">Группа пользователей</div>
+                    <div class="table__cell table__cell--header table__cell--actions">Действии</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell table__cell--checkbox">
+                      <div class="custom-input custom-input--checkbox">
+                        <label>
+                          <input type="checkbox" name="checked"/><span class="custom-input__checkbox"></span><span class="custom-input__label visually-hidden">Выбрано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--id">1</div>
+                    <div class="table__cell table__cell--user-name">Худовеков Георгий Измайлович</div>
+                    <div class="table__cell table__cell--user-mail">name@domain.com</div>
+                    <div class="table__cell table__cell--user-group">Администратор</div>
+                    <div class="table__cell table__cell--toggle">
+                      <div class="toggle">
+                        <label>
+                          <input class="visually-hidden" type="checkbox" name="released" checked="checked"/><span class="toggle__elem"></span><span class="toggle__label visually-hidden">Опубликовано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--edit">
+                      <button class="button-icon button-icon--blue" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table__cell table__cell--delete">
+                      <button class="button-icon button-icon--red" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-delete"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell table__cell--checkbox">
+                      <div class="custom-input custom-input--checkbox">
+                        <label>
+                          <input type="checkbox" name="checked"/><span class="custom-input__checkbox"></span><span class="custom-input__label visually-hidden">Выбрано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--id">2</div>
+                    <div class="table__cell table__cell--user-name">Худовеков Георгий Измайлович</div>
+                    <div class="table__cell table__cell--user-mail">name@domain.com</div>
+                    <div class="table__cell table__cell--user-group">Поставщик</div>
+                    <div class="table__cell table__cell--toggle">
+                      <div class="toggle">
+                        <label>
+                          <input class="visually-hidden" type="checkbox" name="released" checked="checked"/><span class="toggle__elem"></span><span class="toggle__label visually-hidden">Опубликовано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--edit">
+                      <button class="button-icon button-icon--blue" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table__cell table__cell--delete">
+                      <button class="button-icon button-icon--red" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-delete"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell table__cell--checkbox">
+                      <div class="custom-input custom-input--checkbox">
+                        <label>
+                          <input type="checkbox" name="checked"/><span class="custom-input__checkbox"></span><span class="custom-input__label visually-hidden">Выбрано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--id">3</div>
+                    <div class="table__cell table__cell--user-name">Худовеков Георгий Измайлович</div>
+                    <div class="table__cell table__cell--user-mail">name@domain.com</div>
+                    <div class="table__cell table__cell--user-group">Поставщик</div>
+                    <div class="table__cell table__cell--toggle">
+                      <div class="toggle">
+                        <label>
+                          <input class="visually-hidden" type="checkbox" name="released" checked="checked"/><span class="toggle__elem"></span><span class="toggle__label visually-hidden">Опубликовано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--edit">
+                      <button class="button-icon button-icon--blue" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table__cell table__cell--delete">
+                      <button class="button-icon button-icon--red" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-delete"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell table__cell--checkbox">
+                      <div class="custom-input custom-input--checkbox">
+                        <label>
+                          <input type="checkbox" name="checked"/><span class="custom-input__checkbox"></span><span class="custom-input__label visually-hidden">Выбрано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--id">4</div>
+                    <div class="table__cell table__cell--user-name">Худовеков Георгий Измайлович</div>
+                    <div class="table__cell table__cell--user-mail">name@domain.com</div>
+                    <div class="table__cell table__cell--user-group">Поставщик</div>
+                    <div class="table__cell table__cell--toggle">
+                      <div class="toggle">
+                        <label>
+                          <input class="visually-hidden" type="checkbox" name="released" checked="checked"/><span class="toggle__elem"></span><span class="toggle__label visually-hidden">Опубликовано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--edit">
+                      <button class="button-icon button-icon--blue" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table__cell table__cell--delete">
+                      <button class="button-icon button-icon--red" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-delete"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell table__cell--checkbox">
+                      <div class="custom-input custom-input--checkbox">
+                        <label>
+                          <input type="checkbox" name="checked"/><span class="custom-input__checkbox"></span><span class="custom-input__label visually-hidden">Выбрано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--id">5</div>
+                    <div class="table__cell table__cell--user-name">Худовеков Георгий Измайлович</div>
+                    <div class="table__cell table__cell--user-mail">name@domain.com</div>
+                    <div class="table__cell table__cell--user-group">Покупатель</div>
+                    <div class="table__cell table__cell--toggle">
+                      <div class="toggle">
+                        <label>
+                          <input class="visually-hidden" type="checkbox" name="released" checked="checked"/><span class="toggle__elem"></span><span class="toggle__label visually-hidden">Опубликовано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--edit">
+                      <button class="button-icon button-icon--blue" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table__cell table__cell--delete">
+                      <button class="button-icon button-icon--red" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-delete"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell table__cell--checkbox">
+                      <div class="custom-input custom-input--checkbox">
+                        <label>
+                          <input type="checkbox" name="checked"/><span class="custom-input__checkbox"></span><span class="custom-input__label visually-hidden">Выбрано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--id">6</div>
+                    <div class="table__cell table__cell--user-name">Худовеков Георгий Измайлович</div>
+                    <div class="table__cell table__cell--user-mail">name@domain.com</div>
+                    <div class="table__cell table__cell--user-group">Покупатель</div>
+                    <div class="table__cell table__cell--toggle">
+                      <div class="toggle">
+                        <label>
+                          <input class="visually-hidden" type="checkbox" name="released" checked="checked"/><span class="toggle__elem"></span><span class="toggle__label visually-hidden">Опубликовано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--edit">
+                      <button class="button-icon button-icon--blue" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table__cell table__cell--delete">
+                      <button class="button-icon button-icon--red" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-delete"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__cell table__cell--checkbox">
+                      <div class="custom-input custom-input--checkbox">
+                        <label>
+                          <input type="checkbox" name="checked"/><span class="custom-input__checkbox"></span><span class="custom-input__label visually-hidden">Выбрано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--id">7</div>
+                    <div class="table__cell table__cell--user-name">Худовеков Георгий Измайлович</div>
+                    <div class="table__cell table__cell--user-mail">name@domain.com</div>
+                    <div class="table__cell table__cell--user-group">Покупатель</div>
+                    <div class="table__cell table__cell--toggle">
+                      <div class="toggle">
+                        <label>
+                          <input class="visually-hidden" type="checkbox" name="released" checked="checked"/><span class="toggle__elem"></span><span class="toggle__label visually-hidden">Опубликовано</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="table__cell table__cell--edit">
+                      <button class="button-icon button-icon--blue" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="table__cell table__cell--delete">
+                      <button class="button-icon button-icon--red" type="button">
+                        <svg width="15" height="15" aria-hidden="true">
+                          <use xlink:href="#icon-delete"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="table__info">
+                  <p class="table__info-text">Выбрано <span>2</span> заказа</p>
+                  <div class="table__info-select">Выберите массовые действия</div>
+                  <button class="button button--orange table__info-btn" type="button">Выполнить</button>
+                </div>
+                <div class="pagination table__pagination" role="navigation" aria-label="Список страниц">
+                  <ul class="pagination__list">
+                    <li class="pagination__item"><a class="pagination__link active">1</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">...</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">12</a></li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+          </div>
         </main>
       </div>
     </div>
